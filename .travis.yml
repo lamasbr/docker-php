@@ -8,12 +8,9 @@ services:
 env:
   - VERSION=5.6-fpm
   - VERSION=7.1-fpm
-  - NO_DEV=1
 
 install:
 - travis_wait 30 make build VERSION=${VERSION}
-- if [ "$NO_DEV" != "1" ]; then travis_wait 30 make -C dev build VERSION=${VERSION}; fi
 
 script:
 - make test VERSION=${VERSION}
-- if [ "$NO_DEV" != "1" ]; then travis_wait 30 make -C dev test VERSION=${VERSION}; fi
