@@ -1,4 +1,5 @@
 # Docker PHP images
+[![Build Status](https://travis-ci.org/lamasbr/docker-php.svg?branch=master)](https://travis-ci.org/lamasbr/docker-php)
 
 Docker images built on [Chialab PHP 5.6-fpm and 7.1-fpm images](https://hub.docker.com/r/chialab/php/) with the addition of LDAP extension.
 
