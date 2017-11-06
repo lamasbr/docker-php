@@ -1,4 +1,6 @@
-= Docker images built on [Chialab PHP 5.6-fpm and 7.1-fpm images](https://hub.docker.com/r/chialab/php/) with the addition of LDAP extension.
+# Docker PHP images
+
+Docker images built on [Chialab PHP 5.6-fpm and 7.1-fpm images](https://hub.docker.com/r/chialab/php/) with the addition of LDAP extension.
 
 ## Available tags and `Dockerfile` links
 - [`5.6-fpm` (_5.6/fpm/Dockerfile_)](https://github.com/lamasbr/docker-php/blob/master/5.6/fpm/Dockerfile)
