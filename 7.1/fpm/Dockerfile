@@ -8,6 +8,6 @@ RUN \
     rm -rf /var/lib/apt/lists/* && \
 	ln -s /usr/lib/libc-client.a /usr/lib/x86_64-linux-gnu/libc-client.a && \
     docker-php-ext-configure ldap --with-libdir=lib/x86_64-linux-gnu/ && \
-    docker-php-ext-configure imap --with-imap --with-imap-ssl --with-kerberos --with-libdir=lib/x86_64-linux-gnu/ && \
+    docker-php-ext-configure imap --with-libdir=lib/x86_64-linux-gnu/ --with-imap-ssl --with-kerberos  && \
     docker-php-ext-install ldap && \
     docker-php-ext-install imap
