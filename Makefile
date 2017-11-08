@@ -11,9 +11,10 @@ EXTENSIONS := \
 	bz2 \
 	calendar \
 	iconv \
+	imap \
 	intl \
 	gd \
-  ldap \
+    ldap \
 	mbstring \
 	mcrypt \
 	memcached \

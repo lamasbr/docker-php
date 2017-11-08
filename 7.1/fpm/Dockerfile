@@ -1,10 +1,12 @@
 FROM chialab/php:7.1-fpm
 MAINTAINER llamas.jf@gmail.com
 
-# Install PHP LDAP extensions
+# Install PHP IMAP and LDAP extensions
 RUN \
     apt-get update && \
-    apt-get install libldap2-dev -y && \
+    apt-get install libldap2-dev libc-client-dev libkrb5-dev -y && \
     rm -rf /var/lib/apt/lists/* && \
     docker-php-ext-configure ldap --with-libdir=lib/x86_64-linux-gnu/ && \
-    docker-php-ext-install ldap
+    docker-php-ext-configure imap --with-kerberos --with-imap-ssl && \
+    docker-php-ext-install ldap && \
+    docker-php-ext-install imap
