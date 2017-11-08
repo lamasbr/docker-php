@@ -3,8 +3,8 @@ MAINTAINER llamas.jf@gmail.com
 
 # Install PHP IMAP and LDAP extensions
 RUN \
-    apt-get update && \
-    `#====================================================` \
+	apt-get update && \
+	`#====================================================` \
 	`# IMAP` \
 	`#====================================================` \
 		apt-get install -y --no-install-recommends libc-client-dev libkrb5-dev && \
