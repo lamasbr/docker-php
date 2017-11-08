@@ -14,7 +14,7 @@ EXTENSIONS := \
 	imap \
 	intl \
 	gd \
-    ldap \
+	ldap \
 	mbstring \
 	mcrypt \
 	memcached \
