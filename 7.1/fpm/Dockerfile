@@ -4,10 +4,19 @@ MAINTAINER llamas.jf@gmail.com
 # Install PHP IMAP and LDAP extensions
 RUN \
     apt-get update && \
-    apt-get install libldap2-dev libc-client-dev libkrb5-dev libc-client2007e libc-client2007e-dev -y && \
-    rm -rf /var/lib/apt/lists/* && \
-	ln -s /usr/lib/libc-client.a /usr/lib/x86_64-linux-gnu/libc-client.a && \
-    docker-php-ext-configure ldap --with-libdir=lib/x86_64-linux-gnu/ && \
-    docker-php-ext-configure imap --with-libdir=lib/x86_64-linux-gnu/ --with-imap-ssl --with-kerberos  && \
-    docker-php-ext-install ldap && \
-    docker-php-ext-install imap
+    `#====================================================` \
+	`# IMAP` \
+	`#====================================================` \
+		apt-get install -y --no-install-recommends libc-client-dev libkrb5-dev && \
+		docker-php-ext-configure imap --with-imap --with-imap-ssl --with-kerberos && \
+		docker-php-ext-install imap && \
+	`#====================================================` \
+	`# LDAP` \
+	`#====================================================` \
+		apt-get install -y --no-install-recommends libldap2-dev && \
+		docker-php-ext-configure ldap --with-libdir=lib/x86_64-linux-gnu/ && \
+		docker-php-ext-install ldap && \
+	`#====================================================` \
+	`# Cleanup` \
+	`#====================================================` \
+		apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
