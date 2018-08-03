@@ -3,7 +3,8 @@ SHELL := /bin/bash
 
 PARENT_IMAGE := chialab/php
 IMAGE := lamasbr/php
-VERSION ?= 7.1-fpm
+VERSION ?= 7.2-apache
+PHP_VERSION = $(firstword $(subst -, ,$(VERSION)))
 
 # Extensions.
 EXTENSIONS := \
@@ -16,7 +17,6 @@ EXTENSIONS := \
 	gd \
 	ldap \
 	mbstring \
-	mcrypt \
 	memcached \
 	mysqli \
 	pdo_mysql \
@@ -25,7 +25,11 @@ EXTENSIONS := \
 	redis \
 	soap \
 	zip
-ifneq ($(VERSION),$(filter 7.1, $(VERSION)))
+ifeq (,$(findstring $(PHP_VERSION), 7.2))
+	# Add more extensions to PHP < 7.2.
+	EXTENSIONS += mcrypt
+endif
+ifeq (,$(findstring $(PHP_VERSION), 7.1 7.2))
 	# Add more extensions to 5.x series images.
 	EXTENSIONS += mysql
 endif
