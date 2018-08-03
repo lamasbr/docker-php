@@ -3,11 +3,12 @@
 [![Docker Pulls](https://img.shields.io/docker/pulls/lamasbr/php.svg)](https://hub.docker.com/r/lamasbr/php/)
 [![Docker Automated build](https://img.shields.io/docker/automated/lamasbr/docker-php.svg)](https://hub.docker.com/r/lamasbr/docker-php/)
 
-Docker images built on [Chialab PHP 5.6-fpm and 7.1-fpm images](https://hub.docker.com/r/chialab/php/) with the addition of IMAP and LDAP extensions.
+Docker images built on [Chialab PHP 5.6-fpm, 7.1-fpm and 7.2-apache images](https://hub.docker.com/r/chialab/php/) with the addition of IMAP and LDAP extensions.
 
 ## Available tags and `Dockerfile` links
 - [`5.6-fpm` (_5.6/fpm/Dockerfile_)](https://github.com/lamasbr/docker-php/blob/master/5.6/fpm/Dockerfile)
 - [`7.1-fpm` (_7.1/fpm/Dockerfile_)](https://github.com/lamasbr/docker-php/blob/master/7.1/fpm/Dockerfile)
+- [`7.2-apache` (_7.2/apache/Dockerfile_)](https://github.com/lamasbr/docker-php/blob/master/7.2/apache/Dockerfile)
 
 ## Installed extensions
 The following modules and extensions have been enabled, in addition to those you can already find in the [official PHP image](https://hub.docker.com/r/_/php/):
