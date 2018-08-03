@@ -31,7 +31,7 @@ ifneq ($(VERSION),$(filter 7.1, $(VERSION)))
 endif
 
 # add opcache check to php version with zend opcache
-ifeq ($(VERSION),$(filter 5.6 7.1, $(VERSION)))
+ifeq ($(VERSION),$(filter 5.6 7.1 7.2, $(VERSION)))
 	EXTENSIONS += OPcache
 endif
 
