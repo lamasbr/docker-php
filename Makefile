@@ -3,7 +3,7 @@ SHELL := /bin/bash
 
 PARENT_IMAGE := chialab/php
 IMAGE := lamasbr/php
-VERSION ?= 7.2-apache
+VERSION ?= 7.2-fpm
 PHP_VERSION = $(firstword $(subst -, ,$(VERSION)))
 
 # Extensions.
