@@ -11,14 +11,15 @@ EXTENSIONS := \
 	bcmath \
 	bz2 \
 	calendar \
+	exif \
 	iconv \
-	imap \
 	intl \
 	gd \
 	ldap \
 	mbstring \
 	memcached \
 	mysqli \
+	OPcache \
 	pdo_mysql \
 	pdo_pgsql \
 	pgsql \
@@ -29,14 +30,9 @@ ifeq (,$(findstring $(PHP_VERSION), 7.2 latest))
 	# Add more extensions to PHP < 7.2.
 	EXTENSIONS += mcrypt
 endif
-ifeq (,$(findstring $(PHP_VERSION), 7.1 7.2 latest))
+ifeq (,$(findstring $(PHP_VERSION), 7.0 7.1 7.2 latest))
 	# Add more extensions to 5.x series images.
 	EXTENSIONS += mysql
-endif
-
-# add opcache check to php version with zend opcache
-ifeq ($(VERSION),$(filter 5.6 7.1 7.2, $(VERSION)))
-	EXTENSIONS += OPcache
 endif
 
 build:
