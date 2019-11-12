@@ -23,9 +23,12 @@ Docker images built on [Chialab PHP images](https://hub.docker.com/r/chialab/php
 - [`7.2` (_7.2/Dockerfile_)](https://github.com/lamasbr/docker-php/blob/master/7.2/Dockerfile)
 - [`7.2-fpm` (_7.2/fpm/Dockerfile_)](https://github.com/lamasbr/docker-php/blob/master/7.2/fpm/Dockerfile)
 - [`7.2-apache` (_7.2/apache/Dockerfile_)](https://github.com/lamasbr/docker-php/blob/master/7.2/apache/Dockerfile)
+- [`7.3` (_7.3/Dockerfile_)](https://github.com/lamasbr/docker-php/blob/master/7.3/Dockerfile)
+- [`7.3-fpm` (_7.3/fpm/Dockerfile_)](https://github.com/lamasbr/docker-php/blob/master/7.3/fpm/Dockerfile)
+- [`7.3-apache` (_7.3/apache/Dockerfile_)](https://github.com/lamasbr/docker-php/blob/master/7.3/apache/Dockerfile)
 
 ## Installed extensions
-The following modules and extensions have been enabled, in addition to those you can already find in the [official PHP image](https://hub.docker.com/r/_/php/):
+The following modules and extensions have been enabled, in addition to those you can already find in the [official PHP image](https://hub.docker.com/_/php):
 
 - `bcmath`
 - `bz2`
